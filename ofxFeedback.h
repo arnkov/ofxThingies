@@ -11,14 +11,14 @@ struct ofxFeedback {
 	}
 
 	void begin() {
-		target.begin();
+		capture.begin();
 	}
 
 	void end() {
 		buffer.draw(0, 0, width, height);
-		target.end();
+		capture.end();
 		buffer.begin();
-		target.draw(
+		capture.draw(
 			-width / scale,
 			-height / scale,
 			width + (width / (scale * 0.5)),
@@ -35,6 +35,6 @@ struct ofxFeedback {
 	float width, height;
 	float scale = 0.f;
 	int clearValue = 1;
-	ofFbo target;
-	ofFbo buffer;
+	ofFbo capture;
+	ofFbo buffer; 
 };
