@@ -2,6 +2,8 @@
 
 #include "ofMain.h"
 
+//heavily inspired by https://p5js.org/examples/3d-simple-feedback.html
+
 struct ofxFeedback {
 	void setup(float width, float height) {
 		this->width = width;
