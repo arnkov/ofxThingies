@@ -34,6 +34,10 @@ public:
         return false;
     }
 
+	void setInterval(float interval) {
+		mInterval = interval;
+	}
+
 private:
     std::string mFilePath;
     std::filesystem::file_time_type mLastModified;
