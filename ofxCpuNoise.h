@@ -1,6 +1,10 @@
 #pragma once
 #include "ofMain.h"
 
+/*
+taken from the displacement map example 
+*/
+
 struct ofxCpuNoise {
 	void setup(int w, int h) {
 		img.allocate(w, h, OF_IMAGE_GRAYSCALE);
