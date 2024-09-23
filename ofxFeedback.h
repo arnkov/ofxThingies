@@ -5,18 +5,18 @@
 //heavily inspired by https://p5js.org/examples/3d-simple-feedback.html
 
 struct ofxFeedback {
-	void setup(float width, float height) {
+	inline void setup(float width, float height) {
 		this->width = width;
 		this->height = height;
 		target.allocate(width, height, GL_RGBA32F_ARB);
 		buffer.allocate(width, height, GL_RGBA32F_ARB);
 	}
 
-	void begin() {
+	inline void begin() {
 		capture.begin();
 	}
 
-	void end() {
+	inline void end() {
 		buffer.draw(0, 0, width, height);
 		capture.end();
 		buffer.begin();
@@ -30,7 +30,7 @@ struct ofxFeedback {
 		buffer.end();
 	}
 
-	void draw(float x, float y) {
+	inline void draw(float x, float y) {
 		buffer.draw(x, y);
 	}
 
